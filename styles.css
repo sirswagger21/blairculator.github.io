@@ -1,0 +1,62 @@
+/* Place your CSS styles in this file */
+
+body {
+	font-family: 'Advent Pro';
+	text-align: center;
+}
+
+#full {
+	padding: 15px;
+	max-width: 80%;
+	margin: auto;
+	margin-top: 3%;
+	background-color: #c50202;
+	border-width: 5px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 10px;
+}
+
+#panel {
+	font-size: 60px;
+	padding: 0px;
+	margin: auto;
+	background-color: white;
+	border-width: 5px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 8px;
+	height: 80px;
+	width: 80%;
+	line-height: 130%;
+}
+
+button {
+	text-align: center;
+	float: left;
+	height: 50px;
+	font-size: 30px;
+	font-weight: 700;  
+	margin: 15px auto;
+	background-color: white;
+	border-width: 3px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 1px;
+	transition: transform .2s;
+	cursor: pointer;
+}
+
+button:hover {
+	transform: scale(1.21);
+}
+
+#operationDiv {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#numberDiv {
+	display: inline-block;
+	vertical-align: top;
+}
