@@ -1,120 +1,84 @@
 <!doctype html>
 
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Scientific Blairculator</title>
 
-		  <!-- Load external CSS styles -->
-		  <link rel="stylesheet" href="styles.css" />
+<head>
+  <meta charset="utf-8">
+  <title>The best website ever trust</title>
 
-		  <!-- Load external JavaScript -->
-		  <script type="text/javascript" src="scripts.js"></script>
-	</head>
+  <!-- Load external CSS styles -->
+  <link rel="stylesheet" href="styles.css" />
 
-	<body>
-		  <div id="full">
-				<div id="panel">
-				</div>
-				<div id="operationDiv">
-					<button class="operation" id="plus" onclick="Yee('+')">
-						+
-					</button>
-					<button class="operation" id="minus" onclick="Yee('-')">
-						-
-					</button>
-					<button class="operation" id="times" onclick="Yee('*')">
-						*
-					</button>
-					<button class="operation" id="divide" onclick="Yee('÷')">
-						÷
-					</button>
-				</div>
-				<div id="numberDiv">
-					<button class="number" id="one" onclick="Yee('1')">
-						1
-					</button>
-					<button class="number" id="two" onclick="Yee('2')">
-						2
-					</button>
-					<button class="number" id="three" onclick="Yee('3')">
-						3
-					</button>
-					<button class="number" id="four" onclick="Yee('4')">
-						4
-					</button>
-					<button class="number" id="five" onclick="Yee('5')">
-						5
-					</button>
-					<button class="number" id="six" onclick="Yee('6')">
-						6
-					</button>
-					<button class="number" id="seven" onclick="Yee('7')">
-						7
-					</button>
-					<button class="number" id="eight" onclick="Yee('8')">
-						8
-					</button>
-					<button class="number" id="nine" onclick="Yee('9')">
-						9
-					</button>
-					<button class="number" id="zero" onclick="Yee('0')">
-						0
-					</button>
-					<button class="equals" id="equals" onclick="equals()">
-						=
-					</button>
-					<button class="number" id="squared" onClick="Dawock('2')">
-						x<sup>2</sup>
-					</button>
-					<script>
-						const panel = document.getElementById("panel");
-						const operations = ["+", "-", "*", "÷", "2".sup()];
-						const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-						let operOccurred = false;
-						var oper = "";
-						var num1 = "";
-						var num2 = "";
-						function Yee(name) {
-							document.getElementById("panel").innerHTML += name;
-							if (operations.includes(name)) {
-								operOccurred = !operOccurred;
-								oper = name;
-							}
-							if (numbers.includes(name)) {
-								if (operOccurred == true) {
-									num2 += name;
-								} else if (operOccurred == false) {
-									num1 += name;
-								}
-							}
-						}
+</head>
 
-						function Dawock(name) {
-							panel.innerHTML += name.sup();
-							panel.style.height = "100px";
-						}
+<body>
+  <div id="full">
+    <div id="panel">
+    </div>
+    <div id="operationDiv">
+      <button class="operation" id="plus" onclick="display('+')">
+        +
+      </button>
+      <button class="operation" id="minus" onclick="display('-')">
+        -
+      </button>
+      <button class="operation" id="times" onclick="display('*')">
+        *
+      </button>
+      <button class="operation" id="divide" onclick="display('÷')">
+        ÷
+      </button>
+      <button class="clear" id="clear" onclick="clearInputs()">
+        Clear
+      </button>
+    </div>
+    <div id="numberDiv">
+      <button class="number" id="one" onclick="display('1')">
+        1
+      </button>
+      <button class="number" id="two" onclick="display('2')">
+        2
+      </button>
+      <button class="number" id="three" onclick="display('3')">
+        3
+      </button>
+      <button class="number" id="four" onclick="display('4')">
+        4
+      </button>
+      <button class="number" id="five" onclick="display('5')">
+        5
+      </button>
+      <button class="number" id="six" onclick="display('6')">
+        6
+      </button>
+      <button class="number" id="seven" onclick="display('7')">
+        7
+      </button>
+      <button class="number" id="eight" onclick="display('8')">
+        8
+      </button>
+      <button class="number" id="nine" onclick="display('9')">
+        9
+      </button>
+      <button class="number" id="zero" onclick="display('0')">
+        0
+      </button>
+      <button class="equals" id="equals" onclick="equals()">
+        =
+      </button>
+<!--       <button class="number" id="squared" onclick="supscript('2')">
+        x<sup>2</sup>
+      </button> -->
+    </div>
 
-						function equals() {
-							if (oper == "+") {
-								var n = parseInt(num1) + parseInt(num2);
-								panel.innerHTML = n.toString();
-							} else if (oper == "-") {
-								var n = parseInt(num1) - parseInt(num2);
-								panel.innerHTML = n.toString();
-							} else if (oper == "*") {
-								var n = parseInt(num1) * parseInt(num2);
-								panel.innerHTML = n.toString();
-							} else if (oper == "÷") {
-								var n = parseInt(num1) / parseInt(num2);
-								panel.innerHTML = n.toString();
-							} else if (oper == "2".sup()) {
-								var n = num1**2;
-								panel.innerHTML = n.toString();
-							}
-						}
-					</script>
-				</div>
-		  </div>
-	</body>
+    <!-- div id="constants">
+      <button class="constant" id="G" onclick="constant('G')">
+        1
+      </button>
+    </div>
+  </div -->
+  
+  <script src="scripts.js"></script>
+</body>
+
 </html>
